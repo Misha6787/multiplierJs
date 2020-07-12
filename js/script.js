@@ -1,6 +1,8 @@
 /* eslint-disable strict */
 'use strict';
-let num = 266219;
-num = num.toString().split('').reduce((sum, current) => sum * (+current), 1) ** 3;
-num = +num.toString().slice(0, 2);
-document.querySelector('body').append(num);
+const num = 266219;
+const str = num.toString().split('');
+const reduceStr = str.reduce((sum, current) => sum * current);
+const degree = reduceStr ** 3;
+const twoNum = degree.toString().slice(0, 2);
+document.querySelector('body').append(twoNum);
